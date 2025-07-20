@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Nexa Light";
+  src: url("./assets/FONTS/light.woff");
+}
+@font-face {
+  font-family: "Nexa Bold";
+  src: url("./assets/FONTS/bold.woff");
+}
+*,
+*::before,
+*::after {
+  transition: all 0.35s ease-in-out;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.light_text{
+    font-family:"Nexa Light" !important ;
+}
+
+.font_nexa{
+    font-family:"Nexa Bold" !important ;
+}
