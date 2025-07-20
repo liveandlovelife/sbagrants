@@ -231,7 +231,7 @@ export default function App() {
               value={grantInputs.firstname}
               onChange={handleChange}
               type="text"
-              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-400 placeholder:font-light px-4 bg-white"
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-400 placeholder:font-light px-4 bg-white h-[45px]"
               placeholder="Enter your firstname"
             />
           </div>
@@ -246,7 +246,7 @@ export default function App() {
               name="lastname"
               value={grantInputs.lastname}
               onChange={handleChange}
-              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-400 placeholder:font-light px-4 bg-white"
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-400 placeholder:font-light px-4 bg-white h-[45px]"
               placeholder="Enter your lastname"
             />
           </div>
@@ -261,7 +261,7 @@ export default function App() {
               name="email"
               value={grantInputs.email}
               onChange={handleChange}
-              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white"
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
               placeholder="Enter your email addres"
             />
           </div>
@@ -275,7 +275,7 @@ export default function App() {
               name="state"
               onChange={handleChange}
               defaultValue={grantInputs.state}
-              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white"
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
             >
               <option value="" disabled>
                 Select a state
@@ -298,7 +298,7 @@ export default function App() {
               name="amount"
               onChange={handleChange}
               defaultValue={grantInputs.amount}
-              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white"
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
             >
               <option value="" disabled>
                 Select a relief payment amount
