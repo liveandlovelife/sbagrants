@@ -362,7 +362,7 @@ export default function App() {
               </option>
               {options.map((option, index) => (
                 <option key={index} value={option.amount}>
-                  Relief payment ${option.amount} - Processing fee ${option.fee}
+                  Relief payment ${option.amount.toLocaleString()} - Processing fee ${option.fee.toLocaleString()}
                 </option>
               ))}
             </select>
