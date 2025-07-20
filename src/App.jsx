@@ -1,10 +1,12 @@
 import {
+  bitcoin,
   img1,
   img2,
   img3,
   img4,
   logo_horizontal,
   powered_by,
+  user_bitcoin,
 } from "./assets/images/images";
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import {
@@ -205,7 +207,14 @@ export default function App() {
             <img src={img1} alt="slide 1 image" />
           </SwiperSlide>
           <SwiperSlide>
+            <img src={bitcoin} alt="slide 1 image" />
+          </SwiperSlide>
+
+          <SwiperSlide>
             <img src={img2} alt="slide 2 image" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={user_bitcoin} alt="slide 1 image" />
           </SwiperSlide>
           <SwiperSlide>
             <img src={img3} alt="slide 3 image" />
